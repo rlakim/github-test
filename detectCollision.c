@@ -8,6 +8,7 @@ int enemyNPCDetectCollision(int posX, int posY) {
 	int arrY = posY - gBoardOy;
 	for (x = 0; x < 1; x++)
 	{
+
 		for (y = 0; y < 2; y++)
 		{
 			if (enemyModel[y][x] != 0 && gameBoardInfo[arrY + y][arrX + x] != 0) {
@@ -15,5 +16,6 @@ int enemyNPCDetectCollision(int posX, int posY) {
 			}
 		}
 	}
+
 	return 1;
 }

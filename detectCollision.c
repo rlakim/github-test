@@ -4,6 +4,8 @@
 //enemyNPC 충돌 관리
 int enemyNPCDetectCollision(int posX, int posY) {
 
+	
+	
 
 	int x, y;
 	int arrX = (posX - gBoardOx) / 2;

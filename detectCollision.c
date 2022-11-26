@@ -3,9 +3,11 @@
 #include "barricadeHandler.h"
 
 //enemyNPC 충돌 관리
-int enemyNPCDetectCollision(int posX, int posY) {	int x, y;
+int enemyNPCDetectCollision(int posX, int posY) {
+	int x, y;
 	int arrX = (posX - gBoardOx) / 2;
-	int arrY = posY - gBoardOy;	for (x = 0; x < 1; x++)
+	int arrY = posY - gBoardOy;
+	for (x = 0; x < 1; x++)
 	{
 		for (y = 0; y < 2; y++)
 		{
@@ -18,7 +20,10 @@ int enemyNPCDetectCollision(int posX, int posY) {	int x, y;
 				return 9;
 			}
 		}
-	}	return 1;}
+	}
+	return 1;
+}
+
 int detectCollisionPC(int posX, int posY) {
 	int arrx = (posX - gBoardOx) / 2;
 	int arry = (posY - gBoardOy);
@@ -35,11 +40,14 @@ int detectCollisionBullet(int posX, int posY) {
 	if (currentGameBoard[arry][arrx] == 4) {
 		return 0;
 	}
+	
 	if (currentGameBoard[arry][arrx] == 5) {
 		return 0;
 	}
 	return 1;
-}int detectCollisionBarricade(int posX, int posY) {	int x, y;
+}
+int detectCollisionBarricade(int posX, int posY) {
+	int x, y;
 	int arrX = (posX - gBoardOx) / 2;
 	int arrY = posY - gBoardOy;
 	for (x = 0; x < 3; x++)
@@ -50,7 +58,10 @@ int detectCollisionBullet(int posX, int posY) {
 			if (barcModel[y][x] != 0 && currentGameBoard[arrY + y][arrX + x] == 1) {
 				return 0;
 			}
-			else if (barcModel[y][x] != 0 && currentGameBoard[arrY + y][arrX + x] != 0) {				return 9;
+			else if (barcModel[y][x] != 0 && currentGameBoard[arrY + y][arrX + x] != 0) {
+				return 9;
 			}
 		}
-	}	return 1;}
+	}
+	return 1;
+}
